@@ -1,0 +1,279 @@
+/* font 찾기 */
+/* advanced animation: radial gradient 확장, custom icon */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app-container {
+    height: 100vh;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.login__input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5vh;
+    width: 30vw;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid #777;
+    transition: all 0.5s;
+    border-radius: 1rem;
+}
+
+.background {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; 
+    opacity: 0;
+    animation: centerToBorder 1s;
+    animation-fill-mode: forwards;
+}
+
+.login__input:focus {
+    outline: none;
+    top: 49%;
+    box-shadow: 0 1rem 0.7rem rgba(0,0,0,0.2);
+    border-bottom: 3px solid #B3E283;
+}
+
+@keyframes centerToBorder {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(75);
+    }
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.greeting {
+    font-size: 8.5rem;
+    padding: 3rem 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    animation: moveInLeft 1s ease-out;
+    color: #eee;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-5rem);
+    } 
+    90% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.clock {
+    padding: 3rem;
+    animation: moveInRight 1s ease-out;
+}
+
+.clock__property {
+    font-family: 'Barlow', sans-serif;
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+    color: #eee;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(5rem);
+    } 
+    90% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.todo-container{
+    padding: 3rem;
+}
+
+.todo__input {
+    height: 5vh;
+    width: 30vw;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    border-bottom: 2px solid #555;
+    transition: all 0.5s;
+    color: rgba(0,0,0,0.5)
+}
+
+.todo__input:focus {
+    outline: none;
+    transform: translateY(-1rem);
+    border-bottom: 2px solid #ccc;
+}
+
+.todo__list {
+    padding: 3rem 0;
+    list-style: none;
+    font-size: 2.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+span{ 
+    display: inline-block;
+    margin-right: 10px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+i{
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+i:hover {
+    opacity: 0.5;
+}
+
+.weather {
+    font-size: 1.75rem;
+    padding: 1.5rem;
+    opacity: 0.5;
+    color: white;
+}
+
+.save {
+    position:fixed;
+    top: 3%;
+    right: 1%;
+}
+
+.save__checkbox {
+    display: none;
+}
+
+.save__checkbox:checked ~ .save__background{
+    transform: translateX(-20rem);
+}
+
+.save__checkbox:checked ~ .save__button{
+    transform: translateX(-19.9rem);
+}
+
+.save__checkbox:checked ~ .save__list-container{
+    width: 15rem;
+    opacity: 1;
+}
+
+.save__title {
+    font-size: 1.3rem;
+    color: #eee;
+}
+
+.save__icon {
+    writing-mode: vertical-rl;
+    font-size: 1.3rem;
+    color:#eee;
+    padding: 1rem 0 0 1rem;
+}
+
+.save__button:hover {
+    background-color: #333;
+}
+
+.save__button {
+    background-color: #555;
+    height: 10rem;
+    width: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    position: fixed;
+    top: 3rem;
+    right: 0;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+.save__background {
+    background-color: #555;
+    height: 52rem;
+    width: 20rem;
+    border-radius: 0 0 0 1rem;
+    position: fixed;
+    top: 3rem;
+    right: -20rem;
+    z-index: 1000;
+    text-align: center;
+    transition: all 0.8s;
+}
+
+.save__list-container{
+    z-index: 1500;
+    height: 45rem;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
+}
+
+.save__list {
+    list-style: square;
+    width: 100%;
+}
+
+.save__list li {
+    margin: 1rem;
+    font-size: 1.3rem;
+    color: #eee;
+}

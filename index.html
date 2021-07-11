@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100;1,200&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/0f0c6f90bb.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="save">
+        <input type="checkbox" class="save__checkbox" id="save-toggle">
+        <label for="save-toggle" class="save__button hidden">
+            <span class="save__icon">Achievement</span>
+        </label>
+
+        <div class="save__background">&nbsp;</div>
+        <div class="save__list-container">
+            <h3 class="save__title">Today's achievement</h3>
+            <ul class="save__list">
+                <!-- <li>here is location</li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <form id="login">
+            <input type="text" placeholder="Enter your name." class="login__input" required>
+        </form>
+    </div>
+
+    <div class="app-container">
+        <div class="content">
+            <h1 class="greeting  hidden">Hello!</h1>
+
+            <div class="clock hidden">
+                <h2 class="clock__property"></h2>
+            </div>
+
+            <div class="todo-container hidden">
+                <form id="todo">
+                    <input type="text" placeholder="What are you going to do?" class="todo__input" required>
+                </form>
+                <ul class="todo__list"></ul>
+            </div>
+        </div>
+
+        <div class="weather">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="background hidden">
+            &nbsp;
+        </div>
+    </div>
+
+
+
+    <script src="js/background.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+
+</html>
