@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Codernineteen's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "codernineteen"
+name                     : "Yechan Jun"
 description              : "My journey as software engineer."
 url                      : "https://codernineteen.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
