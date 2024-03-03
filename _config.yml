@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Codernineteen"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/catprofile.jpg"
   bio              : "Computer Graphics Engineeer"
   location         : "Seoul, Republic of Korea"
   email            : "coderfromnineteen@gmail.com"
